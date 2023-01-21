@@ -156,12 +156,14 @@ I visualize the cumulative sum of three points shoot through geom_step, where fo
 n <- n + geom_step(aes(x = ff$N_games, y = cum_sum, group = ID, color = yearSeason), linetype = "solid",
             alpha = 1, size = 1.08)
 ```
+
 Here, I visualize the x - axis representing the number of games in a season.
 ```{fig.height=7, fig.width=6, fig.align='center}
 n <-  n + geom_segment(aes(x=0, xend=83,
                    y=0, yend=0), 
                size=1) 
 ```
+
 A fixed coordinate system forces a specified ratio between the physical representation of data units on the axes. The ratio is equal to 1/3, it means that one unit on the x - axis is 1/3 of one unit on the y - axis.
 ```{fig.height=7, fig.width=6, fig.align='center}
 n <-  n + coord_fixed(ratio=1/3)
